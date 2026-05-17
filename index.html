@@ -1015,11 +1015,6 @@
     .service-item:last-child { border-bottom: none; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
     .hero-badge { display: none; }
-    .brands-row {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem 1rem;
-    }
-    .brand-logo { height: 80px; }
   }
 
   /* ── Brands ───────────────────────────────────────────────── */
@@ -1049,6 +1044,13 @@
     object-fit: contain;
   }
   .brand-logo:hover { opacity: 1; }
+  @media (max-width: 900px) {
+    .brands-row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1rem;
+    }
+    .brand-logo { height: 80px; }
+  }
 </style>
 </head>
 <body>
