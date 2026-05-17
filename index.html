@@ -1015,7 +1015,40 @@
     .service-item:last-child { border-bottom: none; }
     .footer-links { flex-wrap: wrap; justify-content: center; }
     .hero-badge { display: none; }
+    .brands-row {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1rem;
+    }
+    .brand-logo { height: 80px; }
   }
+
+  /* ── Brands ───────────────────────────────────────────────── */
+  #brands { background: var(--black); border-top: 1px solid var(--border); }
+  .brands-intro {
+    max-width: 520px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 4rem;
+  }
+  .brands-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .brand-logo {
+    height: 120px;
+    width: 100%;
+    max-width: 220px;
+    justify-self: center;
+    opacity: 0.45;
+    mix-blend-mode: screen;
+    transition: opacity 0.3s ease;
+    object-fit: contain;
+  }
+  .brand-logo:hover { opacity: 1; }
 </style>
 </head>
 <body>
@@ -1233,6 +1266,25 @@
     </div>
   </div>
 </section>
+
+<!-- Brands -->
+<section id="brands">
+  <div class="section-label reveal">Trusted By</div>
+  <h2 class="section-title reveal" style="transition-delay:0.08s">Brands Our Artists<br>Have Worked On</h2>
+  <p class="brands-intro reveal" style="transition-delay:0.12s">
+    Our team brings experience from global brand campaigns and productions across consumer electronics, e-commerce, and lifestyle sectors.
+  </p>
+  <div class="brands-row reveal" style="transition-delay:0.18s">
+    <img class="brand-logo" src="assets/imgs/sony.png" alt="Sony">
+    <img class="brand-logo" src="assets/imgs/amazon.png" alt="Amazon">
+    <img class="brand-logo" src="assets/imgs/TATA.png" alt="Tata Neu">
+    <img class="brand-logo" src="assets/imgs/SONATA.png" alt="Sonata">
+    <img class="brand-logo" src="assets/imgs/MOUVAL.png" alt="Mouval">
+    <img class="brand-logo" src="assets/imgs/HYPER.png" alt="Hyper Fenton">
+  </div>
+</section>
+
+
 
 <!-- About -->
 <section id="about">
@@ -1528,5 +1580,6 @@ window.addEventListener('load', () => {
   onScroll();
 })();
 </script>
+
 </body>
 </html>
